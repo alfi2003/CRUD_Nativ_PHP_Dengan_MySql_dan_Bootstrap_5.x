@@ -34,7 +34,7 @@
         <br>
 
         <div class="card shadow mt-2">
-            <div class="card-header">Data Tamu</div>
+            <div class="card-header">Data Silsila</div>
             <div class="card-body">
                 <a class="btn btn-success btn-sm" href="add.php"><i class="bi bi-plus-circle"></i> Add data</a>
                 <div class="table-responsive mt-2">
@@ -42,21 +42,20 @@
                         <tr>
                             <th class="bg-dark text-white text-center">No</th>
                             <th class="bg-dark text-white">Name</th>
-                            <th class="bg-dark text-white">Email</th>
-                            <th class="bg-dark text-white">Message</th>
+                            <th class="bg-dark text-white">Jensi Kelamin</th>
+                            <!-- <th class="bg-dark text-white">Message</th> -->
                             <th class="bg-dark text-white text-center">Action</th>
                         </tr>
                         <?php 
                             include "koneksi.php";
-                            $query_mysql = $db->query("SELECT * FROM tamu2")or die(mysqli_error());
+                            $query_mysql = $db->query("SELECT * FROM kel_budi")or die(mysqli_error());
                             $nomor = 1;
                             while($data = mysqli_fetch_array($query_mysql)){
                         ?>
                         <tr>
                             <td class="text-center"><?php echo $nomor++; ?></td>
-                            <td><?php echo $data['name']; ?></td>
-                            <td><?php echo $data['email']; ?></td>
-                            <td><?php echo $data['message']; ?></td>
+                            <td><?php echo $data['nama']; ?></td>
+                            <td><?php echo $data['jenis_kelamin']; ?></td>
                             <td class="text-center">
                                 <a class="btn btn-warning btn-sm" href="edit.php?id=<?php echo $data['id']; ?>"><i
                                         class="bi bi-pencil-square"></i></a>

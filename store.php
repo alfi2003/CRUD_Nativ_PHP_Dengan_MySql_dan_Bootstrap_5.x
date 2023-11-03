@@ -3,12 +3,11 @@
 include 'koneksi.php';
  
 // menangkap data yang di kirim dari form
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+$nama = $_POST['nama'];
+$jenis_kelamin = $_POST['jenis_kelamin'];
  
 // menginput data ke database
-$db->query("insert into tamu2 values('','$name','$email','$message')");
+$db->query("insert into kel_budi values('','$nama','$jenis_kelamin')");
  
 // mengalihkan halaman kembali ke index.php
 header("location:index.php?pesan=add");

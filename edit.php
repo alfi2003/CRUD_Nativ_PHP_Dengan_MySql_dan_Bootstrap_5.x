@@ -19,7 +19,7 @@
         <?php 
         include "koneksi.php";
         $id = $_GET['id'];
-        $query_mysql = $db->query("SELECT * FROM tamu2 WHERE id='$id'")or die(mysqli_error());
+        $query_mysql = $db->query("SELECT * FROM kel_budi WHERE id='$id'")or die(mysqli_error());
         while($data = mysqli_fetch_array($query_mysql)){
         ?>
 
@@ -27,26 +27,21 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-header">
-                        <i class="bi bi-pencil-square"></i> Edit Data Tamu
+                        <i class="bi bi-pencil-square"></i> Edit Data
                     </div>
                     <div class="card-body">
                         <form action="update.php" method="post">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="name">Name:</label>
+                                    <label for="nama">Nama:</label>
                                     <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
-                                    <input type="text" class="form-control" name="name"
-                                        value="<?php echo $data['name'] ?>">
+                                    <input type="text" class="form-control" name="nama"
+                                        value="<?php echo $data['nama'] ?>">
                                 </div>
                                 <div class="col-md-12 mt-2">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" name="email"
-                                        value="<?php echo $data['email'] ?>">
-                                </div>
-                                <div class="col-md-12 mt-2">
-                                    <label for="message">Message:</label>
-                                    <input type="text" class="form-control" name="message"
-                                        value="<?php echo $data['message'] ?>">
+                                    <label for="jenis_kelamin">Jenis Kelamin:</label>
+                                    <input type="text" class="form-control" name="jenis_kelamin"
+                                        value="<?php echo $data['jenis_kelamin'] ?>">
                                 </div>
                                 <div class="col-md-12 mt-4">
                                     <a href="index.php" class="btn btn-secondary btn-sm">Back to home</a>

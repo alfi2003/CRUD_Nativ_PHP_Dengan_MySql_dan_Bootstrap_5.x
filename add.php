@@ -19,26 +19,26 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-header">
-                        <i class="bi bi-plus-circle"></i> Add Data Tamu
+                        <i class="bi bi-plus-circle"></i> Add Data
                     </div>
                     <div class="card-body">
                         <form action="store.php" method="post">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="name">Name:</label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="name"
+                                    <label for="name">Nama:</label>
+                                    <input type="text" class="form-control" name="nama" id="nama" placeholder="nama"
                                         require>
                                 </div>
                                 <div class="col-md-12 mt-2">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="email"
-                                        require>
+                                    <label for="jenis_kelamin">Jenis Kelamin:</label>
+                                    <input type="text" class="form-control" name="jenis_kelamin" id="jenis_kelamin"
+                                        placeholder="jenis_kelamin" require>
                                 </div>
-                                <div class="col-md-12 mt-2">
+                                <!-- <div class="col-md-12 mt-2">
                                     <label for="message">Message:</label>
                                     <input type="text" class="form-control" name="message" id="message"
                                         placeholder="message">
-                                </div>
+                                </div> -->
                                 <div class="col-md-12 mt-4">
                                     <a class="btn btn-secondary btn-sm" href="index.php">Back to home</a>
                                     <button type="submit" class="btn btn-primary btn-sm">Save</button>
